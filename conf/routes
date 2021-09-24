@@ -1,0 +1,7 @@
+# Routes
+
+GET     /employees                controllers.EmployeeController.findAll()
+GET     /employees/:id            controllers.EmployeeController.findOne(id: String)
+POST    /employees                controllers.EmployeeController.create()
+PUT     /employees/:id            controllers.EmployeeController.update(id: String)
+DELETE  /employees/:id            controllers.EmployeeController.delete(id: String)

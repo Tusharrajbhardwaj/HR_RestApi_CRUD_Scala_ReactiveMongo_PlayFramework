@@ -1,0 +1,263 @@
+2021-09-24 23:38:45 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2021-09-24 23:38:49 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2021-09-24 23:39:06 [31mWARN [0;39m [36mreactivemongo.api.MongoConnection[0;39m [35m[0;39m [Supervisor-1/Connection-1] Timeout after 8200 milliseconds while probing the connection monitor: IsPrimaryAvailable#1755576172?
+2021-09-24 23:39:06 [31mWARN [0;39m [36mreactivemongo.api.MongoConnection[0;39m [35m[0;39m [Supervisor-1/Connection-1] Timeout after 8200 milliseconds while probing the connection monitor: IsPrimaryAvailable#512612442?
+2021-09-24 23:39:07 [1;31mERROR[0;39m [36mapplication[0;39m [35m[0;39m 
+
+! @7l6gcml1h - Internal server error, for (GET) [/employees] ->
+ 
+play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[PrimaryUnavailableException: MongoError['No primary node is available! (Supervisor-1/Connection-1)']]]
+	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:344)
+	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:263)
+	at play.core.server.AkkaHttpServer$$anonfun$1.applyOrElse(AkkaHttpServer.scala:443)
+	at play.core.server.AkkaHttpServer$$anonfun$1.applyOrElse(AkkaHttpServer.scala:441)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:454)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:41)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(ForkJoinExecutorConfigurator.scala:49)
+	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+Caused by: reactivemongo.core.actors.Exceptions$PrimaryUnavailableException: MongoError['No primary node is available! (Supervisor-1/Connection-1)']
+	at play.modules.reactivemongo.DefaultReactiveMongoApi.database(DefaultReactiveMongoApi.scala:54)
+	at reactivemongo.api.MongoConnection.database(MongoConnection.scala:93)
+Caused by: reactivemongo.core.actors.Exceptions$InternalState: 
+	at reactivemongo.ChannelConnected(07423cf0, {{NodeSet None Node[localhost:27017: Unknown (1/1/1 available connections), latency=9223372036854775807ns, authenticated={}] }})(<time:9080449166000>)
+	at reactivemongo.ChannelConnected(7f34bc57, {{NodeSet None Node[localhost:27017: Unknown (0/0/1 available connections), latency=9223372036854775807ns, authenticated={}] }})(<time:9079691219500>)
+	at reactivemongo.Start({{NodeSet None Node[localhost:27017: Unknown (0/0/1 available connections), latency=9223372036854775807ns, authenticated={}] }})(<time:9078962546300>)
+2021-09-24 23:39:07 [1;31mERROR[0;39m [36mapplication[0;39m [35m[0;39m 
+
+! @7l6gcml1h - Internal server error, for (GET) [/employees] ->
+ 
+play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[PrimaryUnavailableException: MongoError['No primary node is available! (Supervisor-1/Connection-1)']]]
+	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:344)
+	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:263)
+	at play.core.server.AkkaHttpServer$$anonfun$1.applyOrElse(AkkaHttpServer.scala:443)
+	at play.core.server.AkkaHttpServer$$anonfun$1.applyOrElse(AkkaHttpServer.scala:441)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:454)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:41)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(ForkJoinExecutorConfigurator.scala:49)
+	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+Caused by: reactivemongo.core.actors.Exceptions$PrimaryUnavailableException: MongoError['No primary node is available! (Supervisor-1/Connection-1)']
+	at play.modules.reactivemongo.DefaultReactiveMongoApi.database(DefaultReactiveMongoApi.scala:54)
+	at reactivemongo.api.MongoConnection.database(MongoConnection.scala:93)
+Caused by: reactivemongo.core.actors.Exceptions$InternalState: 
+	at reactivemongo.ChannelConnected(07423cf0, {{NodeSet None Node[localhost:27017: Unknown (1/1/1 available connections), latency=9223372036854775807ns, authenticated={}] }})(<time:9080449166000>)
+	at reactivemongo.ChannelConnected(7f34bc57, {{NodeSet None Node[localhost:27017: Unknown (0/0/1 available connections), latency=9223372036854775807ns, authenticated={}] }})(<time:9079691219500>)
+	at reactivemongo.Start({{NodeSet None Node[localhost:27017: Unknown (0/0/1 available connections), latency=9223372036854775807ns, authenticated={}] }})(<time:9078962546300>)
+2021-09-24 23:45:19 [34mINFO [0;39m [36mp.m.r.DefaultReactiveMongoApi[0;39m [35m[0;39m ReactiveMongoApi stopping...
+2021-09-24 23:45:20 [34mINFO [0;39m [36mp.m.r.DefaultReactiveMongoApi[0;39m [35m[0;39m ReactiveMongoApi connections are stopped
+2021-09-24 23:45:23 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2021-09-24 23:45:23 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2021-09-25 00:35:35 [31mWARN [0;39m [36mr.core.actors.MongoDBSystem[0;39m [35m[0;39m [Supervisor-2/Connection-1] Node[localhost:27017: Unknown (10/10/10 available connections), latency=29058932200ns, authenticated={}] hasn't answered in time to last ping! Please check its connectivity (<time:12469674842400>).
+reactivemongo.core.actors.Exceptions$InternalState: 
+	at reactivemongo.ConnectAll$IsMaster(317, {{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=1835900ns, authenticated={}] }})(<time:12257969849400>)
+	at reactivemongo.IsMaster(true, 317, {{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=12257967814600ns, authenticated={}] }})(<time:12257969749600>)
+	at reactivemongo.RefreshAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=538770600ns, authenticated={}] }})(<time:12257968144100>)
+	at reactivemongo.ConnectAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=538770600ns, authenticated={}] }})(<time:12257967731700>)
+	at reactivemongo.ConnectAll$IsMaster(316, {{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=538770600ns, authenticated={}] }})(<time:12248496840500>)
+	at reactivemongo.IsMaster(true, 316, {{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=12247957845400ns, authenticated={}] }})(<time:12248496726200>)
+	at reactivemongo.RefreshAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=2078600ns, authenticated={}] }})(<time:12247958146400>)
+	at reactivemongo.ConnectAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=2078600ns, authenticated={}] }})(<time:12247957778000>)
+	at reactivemongo.ConnectAll$IsMaster(315, {{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=2078600ns, authenticated={}] }})(<time:12237968284700>)
+	at reactivemongo.IsMaster(true, 315, {{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=12237966035700ns, authenticated={}] }})(<time:12237968209100>)
+	at reactivemongo.RefreshAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=2284300ns, authenticated={}] }})(<time:12237966551700>)
+	at reactivemongo.ConnectAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=2284300ns, authenticated={}] }})(<time:12237965930600>)
+	at reactivemongo.ConnectAll$IsMaster(314, {{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=2284300ns, authenticated={}] }})(<time:12227975973700>)
+	at reactivemongo.IsMaster(true, 314, {{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=12227973457200ns, authenticated={}] }})(<time:12227975860900>)
+	at reactivemongo.RefreshAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=5067700ns, authenticated={}] }})(<time:12227974059900>)
+	at reactivemongo.ConnectAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=5067700ns, authenticated={}] }})(<time:12227973060400>)
+	at reactivemongo.ConnectAll$IsMaster(313, {{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=5067700ns, authenticated={}] }})(<time:12222189628200>)
+	at reactivemongo.IsMaster(true, 313, {{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=12222183953500ns, authenticated={}] }})(<time:12222189364200>)
+	at reactivemongo.RefreshAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=32759700ns, authenticated={}] }})(<time:12222184772200>)
+	at reactivemongo.ConnectAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=32759700ns, authenticated={}] }})(<time:12222183713300>)
+	at reactivemongo.ConnectAll$IsMaster(312, {{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=32759700ns, authenticated={}] }})(<time:12208011120200>)
+	at reactivemongo.IsMaster(true, 312, {{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=12207978183500ns, authenticated={}] }})(<time:12208011046700>)
+	at reactivemongo.ConnectAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=12207978183500ns, authenticated={}] }})(<time:12207978839900>)
+	at reactivemongo.RefreshAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=296788500ns, authenticated={}] }})(<time:12207978580300>)
+	at reactivemongo.ConnectAll$IsMaster(311, {{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=296788500ns, authenticated={}] }})(<time:12198275059100>)
+2021-09-25 00:35:35 [31mWARN [0;39m [36mr.core.actors.MongoDBSystem[0;39m [35m[0;39m [Supervisor-2/Connection-1] Node[localhost:27017: Unknown (10/10/10 available connections), latency=11716425200ns, authenticated={}] hasn't answered in time to last ping! Please check its connectivity (<time:12469779419600>).
+reactivemongo.core.actors.Exceptions$InternalState: 
+	at reactivemongo.ConnectAll$IsMaster(317, {{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=1835900ns, authenticated={}] }})(<time:12257969849400>)
+	at reactivemongo.IsMaster(true, 317, {{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=12257967814600ns, authenticated={}] }})(<time:12257969749600>)
+	at reactivemongo.RefreshAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=538770600ns, authenticated={}] }})(<time:12257968144100>)
+	at reactivemongo.ConnectAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=538770600ns, authenticated={}] }})(<time:12257967731700>)
+	at reactivemongo.ConnectAll$IsMaster(316, {{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=538770600ns, authenticated={}] }})(<time:12248496840500>)
+	at reactivemongo.IsMaster(true, 316, {{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=12247957845400ns, authenticated={}] }})(<time:12248496726200>)
+	at reactivemongo.RefreshAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=2078600ns, authenticated={}] }})(<time:12247958146400>)
+	at reactivemongo.ConnectAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=2078600ns, authenticated={}] }})(<time:12247957778000>)
+	at reactivemongo.ConnectAll$IsMaster(315, {{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=2078600ns, authenticated={}] }})(<time:12237968284700>)
+	at reactivemongo.IsMaster(true, 315, {{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=12237966035700ns, authenticated={}] }})(<time:12237968209100>)
+	at reactivemongo.RefreshAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=2284300ns, authenticated={}] }})(<time:12237966551700>)
+	at reactivemongo.ConnectAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=2284300ns, authenticated={}] }})(<time:12237965930600>)
+	at reactivemongo.ConnectAll$IsMaster(314, {{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=2284300ns, authenticated={}] }})(<time:12227975973700>)
+	at reactivemongo.IsMaster(true, 314, {{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=12227973457200ns, authenticated={}] }})(<time:12227975860900>)
+	at reactivemongo.RefreshAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=5067700ns, authenticated={}] }})(<time:12227974059900>)
+	at reactivemongo.ConnectAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=5067700ns, authenticated={}] }})(<time:12227973060400>)
+	at reactivemongo.ConnectAll$IsMaster(313, {{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=5067700ns, authenticated={}] }})(<time:12222189628200>)
+	at reactivemongo.IsMaster(true, 313, {{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=12222183953500ns, authenticated={}] }})(<time:12222189364200>)
+	at reactivemongo.RefreshAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=32759700ns, authenticated={}] }})(<time:12222184772200>)
+	at reactivemongo.ConnectAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=32759700ns, authenticated={}] }})(<time:12222183713300>)
+	at reactivemongo.ConnectAll$IsMaster(312, {{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=32759700ns, authenticated={}] }})(<time:12208011120200>)
+	at reactivemongo.IsMaster(true, 312, {{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=12207978183500ns, authenticated={}] }})(<time:12208011046700>)
+	at reactivemongo.ConnectAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=12207978183500ns, authenticated={}] }})(<time:12207978839900>)
+	at reactivemongo.RefreshAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=296788500ns, authenticated={}] }})(<time:12207978580300>)
+	at reactivemongo.ConnectAll$IsMaster(311, {{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=296788500ns, authenticated={}] }})(<time:12198275059100>)
+2021-09-25 00:35:36 [31mWARN [0;39m [36mr.core.actors.MongoDBSystem[0;39m [35m[0;39m [Supervisor-2/Connection-1] Received unexpected isMaster from localhost:27017 response #318 (expected #320)! Please check connectivity.
+reactivemongo.core.actors.Exceptions$InternalState: 
+	at reactivemongo.ConnectAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=12429003850200ns, authenticated={}] }})(<time:12429201287500>)
+	at reactivemongo.RefreshAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=1835900ns, authenticated={}] }})(<time:12429200893800>)
+	at reactivemongo.ConnectAll$IsMaster(317, {{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=1835900ns, authenticated={}] }})(<time:12257969849400>)
+	at reactivemongo.IsMaster(true, 317, {{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=12257967814600ns, authenticated={}] }})(<time:12257969749600>)
+	at reactivemongo.RefreshAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=538770600ns, authenticated={}] }})(<time:12257968144100>)
+	at reactivemongo.ConnectAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=538770600ns, authenticated={}] }})(<time:12257967731700>)
+	at reactivemongo.ConnectAll$IsMaster(316, {{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=538770600ns, authenticated={}] }})(<time:12248496840500>)
+	at reactivemongo.IsMaster(true, 316, {{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=12247957845400ns, authenticated={}] }})(<time:12248496726200>)
+	at reactivemongo.RefreshAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=2078600ns, authenticated={}] }})(<time:12247958146400>)
+	at reactivemongo.ConnectAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=2078600ns, authenticated={}] }})(<time:12247957778000>)
+	at reactivemongo.ConnectAll$IsMaster(315, {{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=2078600ns, authenticated={}] }})(<time:12237968284700>)
+	at reactivemongo.IsMaster(true, 315, {{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=12237966035700ns, authenticated={}] }})(<time:12237968209100>)
+	at reactivemongo.RefreshAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=2284300ns, authenticated={}] }})(<time:12237966551700>)
+	at reactivemongo.ConnectAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=2284300ns, authenticated={}] }})(<time:12237965930600>)
+	at reactivemongo.ConnectAll$IsMaster(314, {{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=2284300ns, authenticated={}] }})(<time:12227975973700>)
+	at reactivemongo.IsMaster(true, 314, {{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=12227973457200ns, authenticated={}] }})(<time:12227975860900>)
+	at reactivemongo.RefreshAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=5067700ns, authenticated={}] }})(<time:12227974059900>)
+	at reactivemongo.ConnectAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=5067700ns, authenticated={}] }})(<time:12227973060400>)
+	at reactivemongo.ConnectAll$IsMaster(313, {{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=5067700ns, authenticated={}] }})(<time:12222189628200>)
+	at reactivemongo.IsMaster(true, 313, {{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=12222183953500ns, authenticated={}] }})(<time:12222189364200>)
+	at reactivemongo.RefreshAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=32759700ns, authenticated={}] }})(<time:12222184772200>)
+	at reactivemongo.ConnectAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=32759700ns, authenticated={}] }})(<time:12222183713300>)
+	at reactivemongo.ConnectAll$IsMaster(312, {{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=32759700ns, authenticated={}] }})(<time:12208011120200>)
+	at reactivemongo.IsMaster(true, 312, {{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=12207978183500ns, authenticated={}] }})(<time:12208011046700>)
+	at reactivemongo.ConnectAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=12207978183500ns, authenticated={}] }})(<time:12207978839900>)
+2021-09-25 00:35:36 [31mWARN [0;39m [36mr.core.actors.MongoDBSystem[0;39m [35m[0;39m [Supervisor-2/Connection-1] Received unexpected isMaster from localhost:27017 response #319 (expected #321)! Please check connectivity.
+reactivemongo.core.actors.Exceptions$InternalState: 
+	at reactivemongo.RefreshNodeSet$RequestIsMaster$PrimaryUnavailable(Node[localhost:27017: Primary (10/10/10 available connections), latency=12429003850200ns, authenticated={}])(<time:12469675356200>)
+	at reactivemongo.ConnectAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=12429003850200ns, authenticated={}] }})(<time:12458062667400>)
+	at reactivemongo.RefreshAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=12429003850200ns, authenticated={}] }})(<time:12430012779600>)
+	at reactivemongo.RefreshAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=12429003850200ns, authenticated={}] }})(<time:12430012744300>)
+	at reactivemongo.ConnectAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=12429003850200ns, authenticated={}] }})(<time:12430012697100>)
+	at reactivemongo.ConnectAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=12429003850200ns, authenticated={}] }})(<time:12430012605200>)
+	at reactivemongo.RefreshAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=12429003850200ns, authenticated={}] }})(<time:12430012506700>)
+	at reactivemongo.ConnectAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=12429003850200ns, authenticated={}] }})(<time:12430012432100>)
+	at reactivemongo.ConnectAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=12429003850200ns, authenticated={}] }})(<time:12430012321500>)
+	at reactivemongo.RefreshAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=12429003850200ns, authenticated={}] }})(<time:12430012114800>)
+	at reactivemongo.ConnectAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=12429003850200ns, authenticated={}] }})(<time:12429201287500>)
+	at reactivemongo.RefreshAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=1835900ns, authenticated={}] }})(<time:12429200893800>)
+	at reactivemongo.ConnectAll$IsMaster(317, {{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=1835900ns, authenticated={}] }})(<time:12257969849400>)
+	at reactivemongo.IsMaster(true, 317, {{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=12257967814600ns, authenticated={}] }})(<time:12257969749600>)
+	at reactivemongo.RefreshAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=538770600ns, authenticated={}] }})(<time:12257968144100>)
+	at reactivemongo.ConnectAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=538770600ns, authenticated={}] }})(<time:12257967731700>)
+	at reactivemongo.ConnectAll$IsMaster(316, {{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=538770600ns, authenticated={}] }})(<time:12248496840500>)
+	at reactivemongo.IsMaster(true, 316, {{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=12247957845400ns, authenticated={}] }})(<time:12248496726200>)
+	at reactivemongo.RefreshAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=2078600ns, authenticated={}] }})(<time:12247958146400>)
+	at reactivemongo.ConnectAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=2078600ns, authenticated={}] }})(<time:12247957778000>)
+	at reactivemongo.ConnectAll$IsMaster(315, {{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=2078600ns, authenticated={}] }})(<time:12237968284700>)
+	at reactivemongo.IsMaster(true, 315, {{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=12237966035700ns, authenticated={}] }})(<time:12237968209100>)
+	at reactivemongo.RefreshAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=2284300ns, authenticated={}] }})(<time:12237966551700>)
+	at reactivemongo.ConnectAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=2284300ns, authenticated={}] }})(<time:12237965930600>)
+	at reactivemongo.ConnectAll$IsMaster(314, {{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=2284300ns, authenticated={}] }})(<time:12227975973700>)
+2021-09-25 00:35:36 [31mWARN [0;39m [36mr.core.actors.MongoDBSystem[0;39m [35m[0;39m [Supervisor-2/Connection-1] Received unexpected isMaster from localhost:27017 response #320 (expected #<none>)! Please check connectivity.
+reactivemongo.core.actors.Exceptions$InternalState: 
+	at reactivemongo.RefreshAll({{NodeSet None Node[localhost:27017: Unknown (10/10/10 available connections), latency=11716425200ns, authenticated={}] }})(<time:12469780669300>)
+	at reactivemongo.ConnectAll({{NodeSet None Node[localhost:27017: Unknown (10/10/10 available connections), latency=11716425200ns, authenticated={}] }})(<time:12469780623900>)
+	at reactivemongo.RefreshAll({{NodeSet None Node[localhost:27017: Unknown (10/10/10 available connections), latency=11716425200ns, authenticated={}] }})(<time:12469780488700>)
+	at reactivemongo.ConnectAll({{NodeSet None Node[localhost:27017: Unknown (10/10/10 available connections), latency=11716425200ns, authenticated={}] }})(<time:12469780437800>)
+	at reactivemongo.RefreshAll({{NodeSet None Node[localhost:27017: Unknown (10/10/10 available connections), latency=11716425200ns, authenticated={}] }})(<time:12469780274700>)
+	at reactivemongo.RefreshAll({{NodeSet None Node[localhost:27017: Unknown (10/10/10 available connections), latency=11716425200ns, authenticated={}] }})(<time:12469780221700>)
+	at reactivemongo.ConnectAll({{NodeSet None Node[localhost:27017: Unknown (10/10/10 available connections), latency=11716425200ns, authenticated={}] }})(<time:12469780160900>)
+	at reactivemongo.RefreshAll({{NodeSet None Node[localhost:27017: Unknown (10/10/10 available connections), latency=11716425200ns, authenticated={}] }})(<time:12469780020700>)
+	at reactivemongo.ConnectAll({{NodeSet None Node[localhost:27017: Unknown (10/10/10 available connections), latency=11716425200ns, authenticated={}] }})(<time:12469779961600>)
+	at reactivemongo.RefreshAll({{NodeSet None Node[localhost:27017: Unknown (10/10/10 available connections), latency=29058932200ns, authenticated={}] }})(<time:12469779810000>)
+	at reactivemongo.RefreshNodeSet$RequestIsMaster$NodeUnavailable(Node[localhost:27017: Unknown (10/10/10 available connections), latency=29058932200ns, authenticated={}])(<time:12469779544900>)
+	at reactivemongo.RefreshAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=12429003850200ns, authenticated={}] }})(<time:12469779127000>)
+	at reactivemongo.RefreshNodeSet$RequestIsMaster$PrimaryUnavailable(Node[localhost:27017: Primary (10/10/10 available connections), latency=12429003850200ns, authenticated={}])(<time:12469675356200>)
+	at reactivemongo.ConnectAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=12429003850200ns, authenticated={}] }})(<time:12458062667400>)
+	at reactivemongo.RefreshAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=12429003850200ns, authenticated={}] }})(<time:12430012779600>)
+	at reactivemongo.RefreshAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=12429003850200ns, authenticated={}] }})(<time:12430012744300>)
+	at reactivemongo.ConnectAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=12429003850200ns, authenticated={}] }})(<time:12430012697100>)
+	at reactivemongo.ConnectAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=12429003850200ns, authenticated={}] }})(<time:12430012605200>)
+	at reactivemongo.RefreshAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=12429003850200ns, authenticated={}] }})(<time:12430012506700>)
+	at reactivemongo.ConnectAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=12429003850200ns, authenticated={}] }})(<time:12430012432100>)
+	at reactivemongo.ConnectAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=12429003850200ns, authenticated={}] }})(<time:12430012321500>)
+	at reactivemongo.RefreshAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=12429003850200ns, authenticated={}] }})(<time:12430012114800>)
+	at reactivemongo.ConnectAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=12429003850200ns, authenticated={}] }})(<time:12429201287500>)
+	at reactivemongo.RefreshAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=1835900ns, authenticated={}] }})(<time:12429200893800>)
+	at reactivemongo.ConnectAll$IsMaster(317, {{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=1835900ns, authenticated={}] }})(<time:12257969849400>)
+2021-09-25 00:35:36 [31mWARN [0;39m [36mr.core.actors.MongoDBSystem[0;39m [35m[0;39m [Supervisor-2/Connection-1] Received unexpected isMaster from localhost:27017 response #321 (expected #<none>)! Please check connectivity.
+reactivemongo.core.actors.Exceptions$InternalState: 
+	at reactivemongo.ConnectAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=12469986884800ns, authenticated={}] }})(<time:12469988269700>)
+	at reactivemongo.RefreshAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=12469986884800ns, authenticated={}] }})(<time:12469988104400>)
+	at reactivemongo.ConnectAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=12469986884800ns, authenticated={}] }})(<time:12469988019100>)
+	at reactivemongo.RefreshAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=12469986884800ns, authenticated={}] }})(<time:12469987859700>)
+	at reactivemongo.ConnectAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=12469986884800ns, authenticated={}] }})(<time:12469987762500>)
+	at reactivemongo.RefreshAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=12469986884800ns, authenticated={}] }})(<time:12469987595300>)
+	at reactivemongo.ConnectAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=12469986884800ns, authenticated={}] }})(<time:12469987505300>)
+	at reactivemongo.RefreshAll({{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=9223372036854775807ns, authenticated={}] }})(<time:12469987275700>)
+	at reactivemongo.ConnectAll$IsMaster(318, {{NodeSet None Node[localhost:27017: Primary (10/10/10 available connections), latency=9223372036854775807ns, authenticated={}] }})(<time:12469986841300>)
+	at reactivemongo.IsMaster(true, 318, {{NodeSet None Node[localhost:27017: Unknown (10/10/10 available connections), latency=11716425200ns, authenticated={}] }})(<time:12469986712700>)
+	at reactivemongo.IsMaster$PrimaryAvailable({{NodeSet None Node[localhost:27017: Unknown (10/10/10 available connections), latency=11716425200ns, authenticated={}] }})(<time:12469986684000>)
+	at reactivemongo.IsMaster$SetAvailable({{NodeSet None Node[localhost:27017: Unknown (10/10/10 available connections), latency=11716425200ns, authenticated={}] }})(<time:12469986614400>)
+	at reactivemongo.ConnectAll({{NodeSet None Node[localhost:27017: Unknown (10/10/10 available connections), latency=11716425200ns, authenticated={}] }})(<time:12469781399400>)
+	at reactivemongo.ConnectAll({{NodeSet None Node[localhost:27017: Unknown (10/10/10 available connections), latency=11716425200ns, authenticated={}] }})(<time:12469781322200>)
+	at reactivemongo.RefreshAll({{NodeSet None Node[localhost:27017: Unknown (10/10/10 available connections), latency=11716425200ns, authenticated={}] }})(<time:12469781236800>)
+	at reactivemongo.ConnectAll({{NodeSet None Node[localhost:27017: Unknown (10/10/10 available connections), latency=11716425200ns, authenticated={}] }})(<time:12469781200900>)
+	at reactivemongo.RefreshAll({{NodeSet None Node[localhost:27017: Unknown (10/10/10 available connections), latency=11716425200ns, authenticated={}] }})(<time:12469781116500>)
+	at reactivemongo.ConnectAll({{NodeSet None Node[localhost:27017: Unknown (10/10/10 available connections), latency=11716425200ns, authenticated={}] }})(<time:12469781080400>)
+	at reactivemongo.RefreshAll({{NodeSet None Node[localhost:27017: Unknown (10/10/10 available connections), latency=11716425200ns, authenticated={}] }})(<time:12469780999400>)
+	at reactivemongo.ConnectAll({{NodeSet None Node[localhost:27017: Unknown (10/10/10 available connections), latency=11716425200ns, authenticated={}] }})(<time:12469780965200>)
+	at reactivemongo.ConnectAll({{NodeSet None Node[localhost:27017: Unknown (10/10/10 available connections), latency=11716425200ns, authenticated={}] }})(<time:12469780892000>)
+	at reactivemongo.RefreshAll({{NodeSet None Node[localhost:27017: Unknown (10/10/10 available connections), latency=11716425200ns, authenticated={}] }})(<time:12469780810600>)
+	at reactivemongo.RefreshAll({{NodeSet None Node[localhost:27017: Unknown (10/10/10 available connections), latency=11716425200ns, authenticated={}] }})(<time:12469780784500>)
+	at reactivemongo.ConnectAll({{NodeSet None Node[localhost:27017: Unknown (10/10/10 available connections), latency=11716425200ns, authenticated={}] }})(<time:12469780746900>)
+	at reactivemongo.RefreshAll({{NodeSet None Node[localhost:27017: Unknown (10/10/10 available connections), latency=11716425200ns, authenticated={}] }})(<time:12469780669300>)
+2021-09-25 00:38:20 [34mINFO [0;39m [36mp.m.r.DefaultReactiveMongoApi[0;39m [35m[0;39m ReactiveMongoApi stopping...
+2021-09-25 00:38:22 [34mINFO [0;39m [36mp.m.r.DefaultReactiveMongoApi[0;39m [35m[0;39m ReactiveMongoApi connections are stopped
+2021-09-25 00:38:24 [31mWARN [0;39m [36mreactivemongo.api.Driver[0;39m [35m[0;39m [Supervisor-2] Fails to close connections within timeout. Continuing closing of ReactiveMongo driver anyway.
+akka.pattern.AskTimeoutException: Ask timed out on [Actor[akka://reactivemongo/user/Supervisor-2#6436910]] after [2000 ms]. Message of type [reactivemongo.core.actors.Close$$anon$1]. A typical reason for `AskTimeoutException` is that the recipient actor didn't send a reply.
+	at reactivemongo.api.MongoDriver.askClose(MongoDriver.scala:26)
+	at reactivemongo.api.MongoDriver.close(MongoDriver.scala:58)
+	at play.modules.reactivemongo.DefaultReactiveMongoApi$$anonfun$$nestedInanonfun$registerDriverShutdownHook$1$1.applyOrElse(DefaultReactiveMongoApi.scala:79)
+2021-09-25 00:38:26 [1;31mERROR[0;39m [36makka.dispatch.Dispatcher[0;39m [35makka.dispatch.Dispatcher[0;39m Future timed out after [2 seconds]
+java.util.concurrent.TimeoutException: Future timed out after [2 seconds]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryAwait0(Promise.scala:212)
+	at scala.concurrent.impl.Promise$DefaultPromise.result(Promise.scala:225)
+	at scala.concurrent.Await$.$anonfun$result$1(package.scala:201)
+	at akka.dispatch.MonitorableThreadFactory$AkkaForkJoinWorkerThread$$anon$3.block(ThreadPoolBuilder.scala:172)
+	at akka.dispatch.forkjoin.ForkJoinPool.managedBlock(ForkJoinPool.java:3641)
+	at akka.dispatch.MonitorableThreadFactory$AkkaForkJoinWorkerThread.blockOn(ThreadPoolBuilder.scala:170)
+	at scala.concurrent.Await$.result(package.scala:124)
+	at reactivemongo.api.MongoDriver.close(MongoDriver.scala:58)
+	at play.modules.reactivemongo.DefaultReactiveMongoApi$$anonfun$$nestedInanonfun$registerDriverShutdownHook$1$1.applyOrElse(DefaultReactiveMongoApi.scala:79)
+	at play.modules.reactivemongo.DefaultReactiveMongoApi$$anonfun$$nestedInanonfun$registerDriverShutdownHook$1$1.applyOrElse(DefaultReactiveMongoApi.scala:74)
+	at scala.concurrent.Future.$anonfun$andThen$1(Future.scala:500)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:439)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:41)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(ForkJoinExecutorConfigurator.scala:49)
+	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+2021-09-25 00:39:25 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2021-09-25 00:39:27 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
